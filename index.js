@@ -1,5 +1,11 @@
 //packages
 const express = require("express");
+const cors = require("cors");
+
+
+var app = express();
+
+app.use(cors());
 
 // internal code
 const { getJobs } = require("./Services");
@@ -46,6 +52,8 @@ server.get("/jobs", (req, res)=>{
 server.get("/", (req, res) => {
   console.log("home");
 });
+
+
 
 // const axios = require("axios")
 // const URL = "https://jobs.github.com/positions.json?description=python";
