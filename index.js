@@ -5,7 +5,15 @@ const express = require("express");
 const { getJobs } = require("./Services");
 const server = express();
 
-const PORT =3000;
+let PORT =3000;
+
+// if(process.env.PORT===undefined){
+//     PORT = process.env.PORT;
+// }
+
+const PORT = process.env.PORT ? process.env.PORT:3000;
+
+
 server.listen(PORT,()=>{
     console.log(`Server listening on ${PORT}`);
 });
