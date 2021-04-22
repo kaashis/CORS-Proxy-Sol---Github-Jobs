@@ -43,9 +43,9 @@ server.get("/jobs", (req, res)=>{
     
 })
 
-// server.get("/", (req, res) => {
-//   console.log("home");
-// });
+server.get("/", (req, res) => {
+  console.log("home");
+});
 
 // const axios = require("axios")
 // const URL = "https://jobs.github.com/positions.json?description=python";
