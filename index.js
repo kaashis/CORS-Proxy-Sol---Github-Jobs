@@ -3,13 +3,10 @@ const express = require("express");
 const cors = require("cors");
 
 
-var app = express();
-
-app.use(cors());
-
 // internal code
 const { getJobs } = require("./Services");
 const server = express();
+server.use(cors());
 
 //let PORT =3000;
 
