@@ -36,7 +36,7 @@ server.get("/jobs", (req, res)=>{
      getJobs(req.query.tech).then((tech_Jobs) => res.send(tech_Jobs[0]));
    }
    else{
-     res.sendStatus(404);
+     res.sendStatus(404).send({error:"tech query parameter is required"});;
      //return res.status(400).send({error:"tech query parameter is required"});
      //res.status(404).send('Not found');
    }
