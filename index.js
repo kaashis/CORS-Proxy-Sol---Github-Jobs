@@ -36,7 +36,7 @@ server.get("/jobs", (req, res)=>{
    if ("tech" in req.query){
      //console.log("yes");
      console.log(`Sending ${req.query.tech} jobs`);
-     getJobs(req.query.tech).then((tech_Jobs) => res.send(tech_Jobs[0]));
+     getJobs(req.query.tech).then((tech_Jobs) => res.send(tech_Jobs));
    }
    else{
      res.sendStatus(404).send({error:"tech query parameter is required"});;
